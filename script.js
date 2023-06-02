@@ -12,35 +12,29 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   };
 
-  // Initialize the chart options
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
   };
 
-  // Create the initial chart
   const myChart = new Chart(ctx, {
     type: "bar",
     data: initialData,
     options: chartOptions,
   });
 
-  // Get the filter select elements
   const filter1 = document.getElementById("filter1");
   const filter2 = document.getElementById("filter2");
 
-  // Define the filter options
   const filterOptions = {
     option1: ["Option 1-1", "Option 1-2", "Option 1-3"],
     option2: ["Option 2-1", "Option 2-2", "Option 2-3"],
     option3: ["Option 3-1", "Option 3-2", "Option 3-3"],
   };
 
-  // Add change event listeners to filters
   filter1.addEventListener("change", handleFilterChange);
   filter2.addEventListener("change", handleFilterChange);
 
-  // Filter change event handler
   function handleFilterChange() {
     const filter1Value = filter1.value;
     const filter2Value = filter2.value;
@@ -48,17 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
     updateChart(filter1Value, filter2Value);
   }
 
-  // Update filter2 options based on filter1Value
   function updateFilterOptions(filter1Value) {
     const options = filterOptions[filter1Value];
     updateSelectOptions(filter2, options);
   }
 
-  // Function to update select options
   function updateSelectOptions(selectElement, options) {
     selectElement.innerHTML = "";
     options.forEach(function (optionText) {
       const option = document.createElement("option");
+      option.value = optionText;
       option.text = optionText;
       selectElement.add(option);
     });
@@ -88,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // Initial update of filter2 options
   const initialFilter1Value = filter1.value;
   updateFilterOptions(initialFilter1Value);
 });
