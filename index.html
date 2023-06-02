@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chart with Filters</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .filter {
+        margin-bottom: 10px;
+      }
+
+      .filter label {
+        display: block;
+        font-weight: bold;
+      }
+
+      .filter select {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      #myChartContainer {
+        height: 400px;
+      }
+
+      #myChart {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="filter">
+        <label for="filter1">Filter 1:</label>
+        <select id="filter1">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+
+      <div class="filter">
+        <label for="filter2">Filter 2:</label>
+        <select id="filter2"></select>
+      </div>
+
+      <div class="container" id="myChartContainer">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
