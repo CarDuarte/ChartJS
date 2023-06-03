@@ -39,11 +39,6 @@ body {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
 #myChartContainer {
   height: 400px;

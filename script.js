@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
     datasets: [
       {
-        label: "Sales",
+        label: "Ventas",
         data: [500, 750, 300, 900, 600, 400],
         backgroundColor: "rgba(54, 162, 235, 0.6)",
       },
@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateSelectOptions(selectElement, options) {
-    console.log("Updating select options", options);
     selectElement.innerHTML = "";
     options.forEach(function (optionText) {
       const option = document.createElement("option");
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       labels: labels,
       datasets: [
         {
-          label: "Sales",
+          label: "Ventas",
           data: data,
           backgroundColor: "rgba(54, 162, 235, 0.6)",
         },
