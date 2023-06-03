@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateSelectOptions(selectElement, options) {
+    console.log("Updating select options", options);
     selectElement.innerHTML = "";
     options.forEach(function (optionText) {
       const option = document.createElement("option");
